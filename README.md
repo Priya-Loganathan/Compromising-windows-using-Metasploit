@@ -58,6 +58,10 @@ Bypass any warning boxes, double-click the file, and allow it to run.
 On kali give the command exploit
 ![image](https://github.com/Priya-Loganathan/Compromising-windows-using-Metasploit/assets/121166075/9c28793a-9789-45b3-93b9-73328162f9a3)
 
+To see a list of processes, at the meterpreter > prompt, execute this command: ps ⇒ can see the fun.exe process running with pid 1156
+![image](https://github.com/Priya-Loganathan/Compromising-windows-using-Metasploit/assets/121166075/3ebff0be-9705-4b37-8d25-ee198512f4c2)
+
+The Metasploit shell is running inside the "fun.exe" process. If the user closes that process, or logs off, the connection will be lost. To become more persistent, we'll migrate to a process that will last longer. Let's migrate to the winlogon process. At the meterpreter > prompt, execute this command: migrate -N explorer.exe at meterpreter > prompt, execute this command: netstat A list of network connections appears, including one to a remote port of 4444, as highlighted in the image below. Notice the "PID/Program name" value for this connection, which is redacted
 
 
 
